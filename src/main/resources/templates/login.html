@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Login</title>
+</head>
+<body>
+	<section>
+		<div class="container mt-3">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="my-card mt-5">
+
+						<div th:if="${param.error}" id="sessionMessage" class="alert alert-danger text-center">
+							Invalid username and password
+						</div>
+
+						<div th:if="${param.logout}" id="sessionMessage" class="alert alert-danger text-center">
+							You have been logged out
+						</div>
+
+						<div class="text-center">
+							<img class="" width=80px; th:src="@{/image/membership.png}" />
+						</div>
+
+						<h1 class="text-center">Login Here !</h1>
+						
+
+						<form id="login-form" class="form" th:action="@{/dologin}" method="post">
+							<!-- Username field -->
+							<div class="form-group form-spacing">
+								<label for="username" class="text">Username:</label><br>
+								<input type="text" name="username" id="username" class="form-control" required>
+							</div>
+							
+							<!-- Password field -->
+							<div class="form-group form-spacing">
+								<label for="password" class="text">Password:</label><br>
+								<input type="password" name="password" id="password" class="form-control" required>
+							</div>
+							
+							<!-- Remember me and register link -->
+							<div class="form-group d-flex align-items-center justify-content-between form-spacing">
+								<div class="form-check">
+									<input id="remember-me" name="remember-me" type="checkbox" class="form-check-input">
+									<label for="remember-me" class="text form-check-label">Remember me</label>
+								</div>
+								<div id="register-link" class="text-right">
+									<a href="/signup" class="text">Register here</a>
+								</div>
+							</div>
+
+							<!-- Submit button -->
+							<div class="container text-center">
+								<button type="submit" class="btn bg-primary text-white">Sign In</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

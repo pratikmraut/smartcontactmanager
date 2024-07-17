@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Failed</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Login Failed</h1>
+            <p>There was an error with your login attempt. Please try again.</p>
+            <a th:href="@{/signin}">Go back to login</a>
+        </div>
+    </section>
+</body>
+</html>

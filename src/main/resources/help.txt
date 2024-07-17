@@ -1,0 +1,91 @@
+show databases;
+use smartcontactdb;
+show tables;
+select * from contact for update;
+select * from contact;
+select * from user;
+desc user;
+select * from user_contacts;
+commit;
+delete from contact where c_id <2150;
+update contact set image_url = "d-photo.png" where image_url is null;
+delete from contact  where image_url is null;
+
+
+D:\TRAINING\SPRINGBOOT\smartcontactmanager\target\classes\static\image
+ to check all the file -> find . -type f -exec ls -l {} +
+/d/TRAINING/SPRINGBOOT/smartcontactmanager
+
+./
+├── .classpath
+├── .gitignore
+├── .mvn/
+│   └── wrapper/
+│       └── maven-wrapper.properties
+├── .project
+├── .settings/
+│   ├── org.eclipse.core.resources.prefs
+│   ├── org.eclipse.jdt.apt.core.prefs
+│   ├── org.eclipse.jdt.core.prefs
+│   ├── org.eclipse.m2e.core.prefs
+│   └── org.springframework.ide.eclipse.prefs
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   └── com/
+    │   │       └── contact/
+    │   │           ├── SmartcontactmanagerApplication.java
+    │   │           ├── config/
+    │   │           │   ├── CustomUserDetails.java
+    │   │           │   ├── MyConfig.java
+    │   │           │   └── UserDetailsServiceImpl.java
+    │   │           ├── controller/
+    │   │           │   ├── HomeController.java
+    │   │           │   ├── SearchController.java
+    │   │           │   └── UserController.java
+    │   │           ├── dao/
+    │   │           │   ├── ContactRepository.java
+    │   │           │   └── UserRepository.java
+    │   │           ├── entities/
+    │   │           │   ├── Contact.java
+    │   │           │   └── User.java
+    │   │           └── helper/
+    │   │               └── Message.java
+    │   ├── resources/
+    │   │   ├── application.properties
+    │   │   ├── help.txt
+    │   │   ├── static/
+    │   │   │   ├── css/
+    │   │   │   │   └── style.css
+    │   │   │   ├── image/
+    │   │   │   │   ├── banner.png
+    │   │   │   │   ├── contact_image.png
+    │   │   │   │   ├── membership.png
+    │   │   │   │   └── ...
+    │   │   │   └── js/
+    │   │   │       └── script.js
+    │   │   └── templates/
+    │   │       ├── about.html
+    │   │       ├── base.html
+    │   │       ├── home.html
+    │   │       ├── login-backup.html
+    │   │       ├── login-fail.html
+    │   │       ├── login.html
+    │   │       ├── normal/
+    │   │       │   ├── add_contact_form.html
+    │   │       │   ├── base.html
+    │   │       │   ├── contact_detail.html
+    │   │       │   ├── profile.html
+    │   │       │   ├── showcontact.html
+    │   │       │   ├── update_form.html
+    │   │       │   └── user_dashboard.html
+    │   │       └── signup.html
+    └── test/
+        └── java/
+            └── com/
+                └── contact/
+                    └── SmartcontactmanagerApplicationTests.java
